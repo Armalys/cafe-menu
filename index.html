@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Всплывающее окно выбора языка -->
+    <div id="language-overlay" class="overlay">
+        <div class="modal">
+            <h2>Выберите язык / Izaberite jezik</h2>
+            <button onclick="setLanguage('ru')">Русский</button>
+            <button onclick="setLanguage('sr')">Srpski</button>
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('zh')">中文</button>
+        </div>
+    </div>
+
+    <!-- Шапка с кнопками управления -->
+    <header id="top-nav" class="hidden">
+        <a href="https://goo.gl/maps/ВАША_ССЫЛКА" target="_blank" class="map-link">📍 Мы на карте</a>
+        <button onclick="showOverlay()" class="lang-switcher">🌐 Сменить язык</button>
+    </header>
+
+    <!-- Контейнер для картинки меню -->
+    <main id="menu-container" class="hidden">
+        <img id="menu-img" src="" alt="Menu">
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
