@@ -1,24 +1,100 @@
-body { margin: 0; font-family: sans-serif; background: #1a1a1a; color: white; }
+/* Общие настройки */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
 
+/* Оверлей на весь экран */
 .overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
-.modal { text-align: center; display: flex; flex-direction: column; gap: 15px; }
-
-button {
-    padding: 15px 40px; font-size: 18px; cursor: pointer; border-radius: 8px; border: none; background: #fff; color: #000;
+/* Модальное окно */
+.modal {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
+.modal h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+/* Сетка кнопок выбора языка */
+.lang-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lang-grid button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lang-grid button:active {
+    background: #555;
+}
+
+/* Плавающие кнопки справа сверху */
 header {
-    position: fixed; top: 10px; right: 10px; display: flex; gap: 10px; z-index: 50;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 500;
 }
 
-.map-link, .lang-switcher {
-    background: rgba(255,255,255,0.8); color: #000; padding: 8px 12px; text-decoration: none; border-radius: 5px; font-size: 14px;
+.nav-item {
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-#menu-container img { width: 100%; display: block; }
+/* Картинка меню */
+#menu-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-.hidden { display: none !important; }
+/* Вспомогательный класс */
+.hidden {
+    display: none !important;
+}
